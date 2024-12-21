@@ -65,7 +65,7 @@ public function update(Request $request, $id)
     $request->validate([
         'type' => 'required|string',
         'name' => 'required|string',
-        'instructor' => 'required|string',
+        'org_body' => 'required|string',
         'file' => 'nullable|file|mimes:pdf,jpg,png,jpeg|max:2048',
         'start_date' => 'required|date',
         'end_date' => 'required|date|after_or_equal:start_date',
@@ -81,7 +81,7 @@ public function update(Request $request, $id)
     $internship->update([
         'type' => $request->type,
         'name' => $request->name,
-        'instructor' => $request->instructor,
+        'org_body' => $request->org_body,
         'file' => $filePath,
         'start_date' => $request->start_date,
         'end_date' => $request->end_date,
