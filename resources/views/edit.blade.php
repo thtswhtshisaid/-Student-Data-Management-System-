@@ -16,7 +16,7 @@
                     <!-- Type Field -->
                     <div class="mt-4">
                         <label for="type" class="block font-medium text-sm text-gray-700">Type</label>
-                        <select name="type" id="type" class="block w-full mt-1" required>
+                        <select name="type" id="type" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                             @if ($entity == 'achievements')
                                 <option value="extra" {{ $item->type == 'extra' ? 'selected' : '' }}>Extra</option>
                                 <option value="co-ciricular" {{ $item->type == 'co-ciricular' ? 'selected' : '' }}>Co-ciricular</option>
@@ -36,20 +36,20 @@
                     <!-- Name Field -->
                     <div class="mt-4">
                         <label for="name" class="block font-medium text-sm text-gray-700">Name</label>
-                        <input type="text" name="name" id="name" value="{{ $item->name }}" class="block w-full mt-1" required>
+                        <input type="text" name="name" id="name" value="{{ $item->name }}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                     </div>
 
                     <!-- Organisation/Body Field -->
                     <div class="mt-4">
                         <label for="org_body" class="block font-medium text-sm text-gray-700">Organisation Body</label>
-                        <input type="text" name="org_body" id="org_body" value="{{ $item->org_body }}" class="block w-full mt-1" required>
+                        <input type="text" name="org_body" id="org_body" value="{{ $item->org_body }}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                     </div>
 
                     <!-- Start Date Field -->
                     @if ($entity != 'publications')
                         <div class="mt-4">
                             <label for="start_date" class="block font-medium text-sm text-gray-700">Start Date</label>
-                            <input type="date" name="start_date" id="start_date" value="{{ $item->start_date }}" class="block w-full mt-1" required>
+                            <input type="date" name="start_date" id="start_date" value="{{ $item->start_date }}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                         </div>
                     @endif
 
@@ -57,7 +57,7 @@
                     @if ($entity != 'publications')
                         <div class="mt-4">
                             <label for="end_date" class="block font-medium text-sm text-gray-700">End Date</label>
-                            <input type="date" name="end_date" id="end_date" value="{{ $item->end_date }}" class="block w-full mt-1" required>
+                            <input type="date" name="end_date" id="end_date" value="{{ $item->end_date }}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                         </div>
                     @endif
 
@@ -65,18 +65,18 @@
                     @if ($entity == 'publications')
                         <div class="mt-4">
                             <label for="upload_date" class="block font-medium text-sm text-gray-700">Upload Date</label>
-                            <input type="date" name="upload_date" id="upload_date" value="{{ $item->upload_date }}" class="block w-full mt-1" required>
+                            <input type="date" name="upload_date" id="upload_date" value="{{ $item->upload_date }}" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500" required>
                         </div>
                     @endif
 
                     <!-- File Field -->
                     <div class="mt-4">
                         <label for="file" class="block font-medium text-sm text-gray-700">File (leave blank to keep current)</label>
-                        <input type="file" name="file" id="file" class="block w-full mt-1">
+                        <input type="file" name="file" id="file" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-orange-500 focus:border-orange-500">
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg">Update</button>
+                    <button type="submit" class="mt-4 px-4 py-2 bg-orange-500 text-white rounded-lg">Update</button>
                 </form>
             </div>
         </div>
